@@ -1,0 +1,60 @@
+/*Globales*/
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Varela Round', sans-serif;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
+h2{
+    text-align: center;
+}
+
+/*cabecera*/
+.cabecera{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+.titulo{
+    margin: auto auto;
+}
+.carrito{
+    width: 20%;
+}
+.carrito img{
+    width: 50%;
+    display: block;
+    margin: auto auto;
+}
+.bannerPrincipal{
+    width: 100%;
+}
+.bannerPrincipal img{
+    width: 100%;
+}
+.cursosInfo{
+    text-align: center;
+    margin: 1rem auto;
+}
+.cursosInfo p{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
