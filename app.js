@@ -43,6 +43,9 @@ function leerDatosCurso(curso){
 
 //muestra en el html del carrito
 function carritoHTML(){
+
+    limpiarHTML(); //para limpiar y no repetir
+
     ArticulosCarrito.forEach( ( curso )=>{
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -61,4 +64,8 @@ function carritoHTML(){
         //agrega html en el carrito
         contenidocarrito.appendChild(row);
     })
+}
+
+function limpiarHTML(){
+    contenidocarrito.innerHTML = '';
 }

@@ -78,11 +78,12 @@ h2{
  }
  .subMenu  ul li ul li { /*posicion de la tabla*/
     display: block;
-    right: 80%;
+    right: 110%;
  }
 .carritoTabla{ /*estilos de la tabla general*/
     background-color: rgb(52, 52, 52);
     color: white;
+    width: 130%;
 }
 .carritoTabla td{
     padding:  0.5rem 1rem;
