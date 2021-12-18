@@ -45,6 +45,46 @@ h2{
     display: block;
     margin: auto auto;
 }
+.subMenu ul {
+    list-style: none;
+    font-size:0 /* truco por el uso de inline-block*/
+ }
+ .subMenu img:hover{
+    cursor: pointer;
+}
+.subMenu li {
+    display: inline-block;
+    width: 100%;
+    position:relative;
+    font-size: 1rem;
+    font-weight: bold;
+    
+ }
+
+ .subMenu ul ul {
+    position: absolute;
+    display: none;
+ }
+ .subMenu  ul li {
+    display: block;
+ }
+ .subMenu li:hover ul {
+    display:block;
+ }
+ .subMenu  ul li ul li { /*posicion de la tabla*/
+    display: block;
+    right: 80%;
+ }
+.carritoTabla{ /*estilos de la tabla general*/
+    background-color: rgb(52, 52, 52);
+    color: white;
+}
+.carritoTabla td{
+    padding:  0.5rem 1rem;
+} 
+
+
+/*imagen de portada*/
 .bannerPrincipal{
     width: 100%;
 }
@@ -60,13 +100,21 @@ h2{
     padding: 0.5rem;
 }
 
-
+@media(min-width: 640px) {
+    .cursosEnLinea{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    margin: 0 auto;
+    }
+}
 .card{
     width: 80%;
     margin: 1rem auto;
     border-radius: 0.5rem;
     background-color: white;
 }
+
 .cardImagen img{
     width: 100%;
     border-radius: 0.5rem;
