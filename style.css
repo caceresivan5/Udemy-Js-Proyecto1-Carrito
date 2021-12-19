@@ -78,16 +78,18 @@ h2{
  }
  .subMenu  ul li ul li { /*posicion de la tabla*/
     display: block;
-    right: 110%;
+    right: 80%;
  }
 .carritoTabla{ /*estilos de la tabla general*/
-    background-color: rgb(52, 52, 52);
-    color: white;
-    width: 130%;
+    background-color: white;
+    width: 100%;
+    
 }
 .carritoTabla td{
-    padding:  0.5rem 1rem;
+    padding:  1rem 1rem;   
+    text-align: center;
 } 
+
 
 
 /*imagen de portada*/
@@ -154,6 +156,10 @@ button{
     border: none;
     color: white;
     font-size: 1.2rem;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(52, 52, 52);
 }
 footer{
     text-align: center;
