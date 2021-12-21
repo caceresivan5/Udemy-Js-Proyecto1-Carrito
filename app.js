@@ -1,5 +1,5 @@
 /* VARIABLES */
-
+const carrito = document.querySelector('.carrito');
 const carritoTabla = document.querySelector('.carritoTabla');
 const contenidocarrito = document.querySelector('#lista-carrito Tbody')
 const cursosEnLinea = document.querySelector('.cursosEnLinea');
@@ -11,6 +11,7 @@ cargarEventListeners();
 
 function cargarEventListeners(){
     cursosEnLinea.addEventListener('click', agregarCurso);/*para agregar un curso */
+    carrito.addEventListener('click' , eliminarCurso);
 }
 
 /*FUNCIONES*/
@@ -19,13 +20,24 @@ function agregarCurso(e){
     if(e.target.classList.contains('agregarCurso')){/*si el usuario presiono el boton con esa clase */
         const cursoSeleccionado = e.target.parentElement.parentElement;
         leerDatosCurso(cursoSeleccionado);
+       
         
     }
+}
+function eliminarCurso(e){
+    if(e.target.classList.contains('eliminar')){
+        const cursoId = e.target.getAttribute('id-curso')
+        ArticulosCarrito = ArticulosCarrito.filter(cursoEliminado => cursoEliminado.id !== cursoId);
+        carritoHTML();
+    }
+    
+    
+
 }
 
 /*TRAVERSING */
 function leerDatosCurso(curso){
-    console.log(curso);
+    
     
     const infoCurso ={
         imagen: curso.querySelector('.cardImagen img').src , /*src para extraer la imagen */
@@ -57,13 +69,12 @@ function leerDatosCurso(curso){
 
     carritoHTML();
 
-    console.log(ArticulosCarrito);
-}
+ }
 
 //muestra en el html del carrito
 function carritoHTML(){
 
-    limpiarHTML(); //para limpiar y no repetir
+    limpiarHTML();
 
     ArticulosCarrito.forEach( ( curso )=>{
         const row = document.createElement('tr');
@@ -74,7 +85,7 @@ function carritoHTML(){
 
          <td> ${curso.precio}</td>
          <td> ${curso.cantidad}</td>
-         <td> <button id-curso='${curso.id}' > x </button></td>
+         <td> <button class='eliminar' id-curso='${curso.id}' > x </button></td>
 
         `;
         //agrega html en el carrito
@@ -83,5 +94,8 @@ function carritoHTML(){
 }
 
 function limpiarHTML(){
-    contenidocarrito.innerHTML = '';
+    //contenidocarrito.innerHTML = '';
+    while(contenidocarrito.firstChild){
+        contenidocarrito.removeChild(contenidocarrito.firstChild);
+    }
 }
