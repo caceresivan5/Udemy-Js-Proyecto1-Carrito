@@ -26,6 +26,8 @@ h1{
 }
 h2{
     text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
 }
 
 /*cabecera*/
@@ -99,13 +101,25 @@ h2{
 .bannerPrincipal img{
     width: 100%;
 }
+.prologo{
+    width: 80%;
+    margin: 3rem auto;
+}
 .cursosInfo{
     text-align: center;
-    margin: 1rem auto;
+    margin: 2rem auto;
+    display: flex;
+    
+    align-items: center;
 }
 .cursosInfo p{
     font-size: 1.2rem;
-    padding: 0.5rem;
+    padding: 0rem 2rem ;
+    text-align: center;
+}
+.cursosInfo img{
+    display: block;
+    width: 15%;
 }
 
 @media(min-width: 640px) {
@@ -130,6 +144,7 @@ h2{
 .cardInfo{
     padding: 1rem;
 }
+
 .CardNombreCurso p{
     margin: 0.5rem 0rem;
     font-weight: bolder;
