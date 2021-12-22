@@ -4,8 +4,8 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Varela Round', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
 background-color: rgb(247, 247, 247);
 
 }
@@ -35,6 +35,10 @@ h3{
     font-size: 1.5rem;
     font-weight: normal;
     padding: 2rem;
+}
+hr{
+    background-color: rgb(52, 52, 52);
+    height: 2px;
 }
 
 /*cabecera*/
@@ -112,6 +116,7 @@ h3{
 .democratizando{
     background-color: rgb(255, 241, 160);
     padding: 2rem;
+    font-weight: 400;
 }
 .prologo{
     width: 80%;
