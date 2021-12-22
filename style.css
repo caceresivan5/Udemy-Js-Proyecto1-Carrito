@@ -87,7 +87,7 @@ h3{
  }
  .subMenu  ul li ul li { /*posicion de la tabla*/
     display: block;
-    right: 80%;
+    right: 95%;
  }
 .carritoTabla{ /*estilos de la tabla general*/
     background-color: white;
@@ -122,7 +122,7 @@ h3{
 }
 .cursosInfo p{
     width: 80%;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 0rem 2rem ;
     text-align: center;
 }
@@ -187,7 +187,8 @@ button{
 }
 button:hover{
     cursor: pointer;
-    background-color: rgb(52, 52, 52);
+    background-color: rgb(253, 212, 99);
+    color: black;
 }
 .eliminar{
     background-color: red;
