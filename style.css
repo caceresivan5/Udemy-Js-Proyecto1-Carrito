@@ -46,6 +46,13 @@ hr{
     display: flex;
     justify-content: space-evenly;
     margin: 1rem;
+    background-color: white;
+}
+
+.navegacion a{
+    
+    display: inline-block;
+  text-align: center;
 }
 .titulo{
     margin: auto auto;
@@ -93,10 +100,13 @@ hr{
  .subMenu  ul li ul li { /*posicion de la tabla*/
     display: block;
     right: 95%;
+    top: 10%;
  }
 .carritoTabla{ /*estilos de la tabla general*/
     background-color: white;
     width: 100%;
+    border: 1px solid rgb(52, 52, 52);
+    border-radius: 0.5rem;
     
 }
 .carritoTabla td{
@@ -122,14 +132,32 @@ hr{
     width: 80%;
     margin: 4rem auto;
 }
+
+@media(min-width: 640px) {
+    .prologo{
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
+    .lerning{
+    width: 50%;
+    margin:  0 auto;
+    }
+    
+}
 .lerning img{
 display: block;
 width: 100%;
 }
+
+@media(min-width: 640px) {
+
+}
 .cursosInfo{
+    display: flex;
     text-align: center;
     margin: 2rem auto;
-    display: flex;
     
     align-items: center;
 }

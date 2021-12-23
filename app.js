@@ -21,9 +21,12 @@ function agregarCurso(e){
         const cursoSeleccionado = e.target.parentElement.parentElement;
         leerDatosCurso(cursoSeleccionado);
        
+       
         
     }
 }
+
+
 function eliminarCurso(e){
     if(e.target.classList.contains('eliminar')){
         const cursoId = e.target.getAttribute('id-curso')
@@ -68,8 +71,9 @@ function leerDatosCurso(curso){
     }
 
     carritoHTML();
-
- }
+    
+    
+}
 
 //muestra en el html del carrito
 function carritoHTML(){
@@ -88,9 +92,13 @@ function carritoHTML(){
          <td> <button class='eliminar' id-curso='${curso.id}' > x </button></td>
 
         `;
+
+        
+        
         //agrega html en el carrito
         contenidocarrito.appendChild(row);
-    })
+       
+    });
 }
 
 function limpiarHTML(){
