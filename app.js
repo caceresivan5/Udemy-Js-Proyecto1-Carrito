@@ -3,6 +3,48 @@ const carrito = document.querySelector('.carrito');
 const carritoTabla = document.querySelector('.carritoTabla');
 const contenidocarrito = document.querySelector('#lista-carrito Tbody')
 const cursosEnLinea = document.querySelector('.cursosEnLinea');
+const cursosIncodeables = document.querySelector('.cursosIncodeables')
+
+
+const CursosArray = [
+    {id: 1, nombre: 'HTML5,CSS para Principiantes', profesor: 'Daniela Beltran D`Agostino', imagen:"img/HTML-CSS.png", precio: 3500},
+    {id: 2, nombre: 'Flexbox - Grid', profesor: 'Jose Calamardo', imagen:"img/flex-grid.png", precio: 2500},
+    {id: 3, nombre: 'Bootstrap 5', profesor: 'Tomas San Martin', imagen:"img/bootstrapOk.png", precio: 3700},
+    {id: 4, nombre: 'JavaScript Moderno', profesor: 'Lionel Almeida', imagen:"img/JavaScript.png", precio: 4200},
+    {id: 5, nombre: 'React Js para Principiantes', profesor: 'Ivan Caceres', imagen:"img/reactJs.png", precio: 4700},
+    {id: 6, nombre: 'M.E.R.N', profesor: 'Mauricio', imagen:"img/MERNok.png", precio: 6500}
+
+]
+
+CursosArray.forEach((cursosArray)=>{
+    const row = document.createElement('div');
+   
+    row.innerHTML = `
+    <div class="card">
+                <div class="cardImagen">
+                    <img src=${cursosArray.imagen} alt="">
+                </div>
+                        <div class="cardInfo">
+                            <div class="CardNombreCurso">
+                            <p >${cursosArray.nombre}</p>
+                            <p >${cursosArray.profesor} </p>
+                        </div>
+                            <div class="cardEstrellas">
+                                <img class="estrellaLogo" src="img/estrella.png" alt="">
+                                <img class="estrellaLogo" src="img/estrella.png" alt="">
+                                <img class="estrellaLogo" src="img/estrella.png" alt="">
+                                <img class="estrellaLogo" src="img/estrella.png" alt="">
+                                <img class="estrellaLogo" src="img/estrella.png" alt="">
+                            </div>
+                            <p class="precio">${cursosArray.precio}</p>
+                            <button class="agregarCurso" data-id="${cursosArray.id}">AGREGAR AL CARRITO</button>
+                    </div>
+                
+            </div>
+    
+    `
+    cursosIncodeables.appendChild(row);
+});
 
 
 let ArticulosCarrito = []; //array donde iran los articulos del carrito
@@ -10,7 +52,7 @@ let ArticulosCarrito = []; //array donde iran los articulos del carrito
 cargarEventListeners();
 
 function cargarEventListeners(){
-    cursosEnLinea.addEventListener('click', agregarCurso);/*para agregar un curso */
+    cursosIncodeables.addEventListener('click', agregarCurso);/*para agregar un curso */
     carrito.addEventListener('click' , eliminarCurso);
 }
 
@@ -19,13 +61,9 @@ function cargarEventListeners(){
 function agregarCurso(e){
     if(e.target.classList.contains('agregarCurso')){/*si el usuario presiono el boton con esa clase */
         const cursoSeleccionado = e.target.parentElement.parentElement;
-        leerDatosCurso(cursoSeleccionado);
-       
-       
-        
+        leerDatosCurso(cursoSeleccionado);      
     }
 }
-
 
 function eliminarCurso(e){
     if(e.target.classList.contains('eliminar')){
@@ -33,14 +71,10 @@ function eliminarCurso(e){
         ArticulosCarrito = ArticulosCarrito.filter(cursoEliminado => cursoEliminado.id !== cursoId);
         carritoHTML();
     }
-    
-    
-
 }
 
 /*TRAVERSING */
 function leerDatosCurso(curso){
-    
     
     const infoCurso ={
         imagen: curso.querySelector('.cardImagen img').src , /*src para extraer la imagen */
@@ -69,10 +103,8 @@ function leerDatosCurso(curso){
         //agregar elementos al array del carrito
         ArticulosCarrito = [...ArticulosCarrito, infoCurso]; //tomo una copia del array y le agrego el objeto infoCurso
     }
-
     carritoHTML();
-    
-    
+       
 }
 
 //muestra en el html del carrito
@@ -93,8 +125,6 @@ function carritoHTML(){
 
         `;
 
-        
-        
         //agrega html en el carrito
         contenidocarrito.appendChild(row);
        

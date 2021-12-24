@@ -173,7 +173,7 @@ width: 100%;
 }
 
 @media(min-width: 640px) {
-    .cursosEnLinea{
+    .cursosIncodeables{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 80%;
