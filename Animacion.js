@@ -18,7 +18,7 @@ sr.reveal('.cursosInfo', {
 
 sr.reveal('.cardInfo', {
     duration: '3000',
-    origin: 'left',
+    origin: 'right',
     distance: '10rem'
 });
 
