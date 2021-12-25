@@ -41,6 +41,12 @@ hr{
     height: 2px;
 }
 
+@keyframes mover{
+    0%{
+        transform: translate(100%);
+    }
+}
+
 /*cabecera*/
 .cabecera{
     display: flex;

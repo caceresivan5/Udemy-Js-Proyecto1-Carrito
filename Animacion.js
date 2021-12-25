@@ -1,27 +1,8 @@
-window.sr = ScrollReveal();
-
-sr.reveal('.bannerPrincipal2', {
-    duration: '3000',
-    origin: 'right',
-    distance: '10rem'
-});
-
-sr.reveal('.parrafo', {
-    duration: '3000'
-});
-
-sr.reveal('.cursosInfo', {
-    duration: '3000',
-    origin: 'left',
-    distance: '10rem'
-});
-
-sr.reveal('.cardInfo', {
-    duration: '3000',
-    origin: 'right',
-    distance: '10rem'
-});
-
-sr.reveal('.frase img', {
-    duration: '3000'
-});
+window.addEventListener('scroll', () => {
+    let animacion = document.querySelector('.animado');
+    let positionObj = animacion.getBoundingClientRect().top;
+    let tamanioPantalla = window.innerHeight / 2;
+    if(positionObj < tamanioPantalla){
+        animacion.style.animation = 'mover 1s ease-out'
+    }
+})
