@@ -48,7 +48,9 @@ hr{
     margin: 1rem;
     background-color: white;
 }
-
+.navegacion{
+    margin: 0 auto;
+}
 .navegacion a{
     
     display: inline-block;
@@ -117,16 +119,76 @@ hr{
 
 
 /*imagen de portada*/
+.portada{
+    position: relative;
+}
 .bannerPrincipal{
     width: 100%;
 }
 .bannerPrincipal img{
     width: 100%;
 }
+.bannerPrincipal2 img{
+    display: block;
+    width: 100%;
+    
+}
+.bannerPrincipal2{
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-55%, -50%);
+}
+.parrafo p:nth-child(1){
+   font-size: 1.7rem;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-55%, -50%);
+    color: white;
+}
+.parrafo p:nth-child(2){
+   
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-55%, -50%);
+    color: white;
+}
+@media(min-width: 640px) {
+     h1{
+        font-size: 1rem;
+    background-color: red;
+        
+    }
+}
 .democratizando{
     background-color: rgb(255, 241, 160);
     padding: 2rem;
     font-weight: 400;
+}
+
+.informacionPrincipal{
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+}
+.frase{
+    position: relative;
+    padding: 6rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.frase img{
+    position: absolute;
+    width: 15%;
+    top: 25%;
+    left: 15%;
+    transform: translate(-55%, -50%);
 }
 .prologo{
     width: 80%;
@@ -137,18 +199,8 @@ hr{
     .prologo{
         width: 70%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-       
-    }
-    .lerning{
-    width: 50%;
-    margin:  0 auto;
-    }
-    
-}
-.lerning img{
-display: block;
-width: 100%;
+        grid-template-columns: repeat(2, 1fr);  
+    }   
 }
 
 @media(min-width: 640px) {
