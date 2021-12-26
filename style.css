@@ -214,15 +214,6 @@ hr{
     }
 }
 
-.democratizando{
-    background: #0052D4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-color: white;
-    padding: 2rem;
-    font-weight: 400;
-}
 
 .informacionPrincipal{
     padding: 1rem;
@@ -230,6 +221,12 @@ color: white;
     font-size: 1.5rem;
     font-weight: 400;
     font-style: italic;
+}
+@media(min-width: 640px) {
+    .informacionPrincipal{
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 .frase{
     position: relative;
@@ -244,6 +241,16 @@ color: white;
     top: 25%;
     left: 10%;
     transform: translate(-55%, -50%);
+}
+@media(min-width: 640px) {
+    .frase img{
+        width: 10%;
+        left: 5%;
+    }
+    .frase{
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 .prologo{
     width: 80%;
